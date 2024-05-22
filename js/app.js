@@ -59,7 +59,7 @@ function selectCompVideo(methodPill, scenePill, n_views, modePill) {
     activeVidID = 1 - activeVidID;
     var video_active = document.getElementById("compVideo" + activeVidID);
     var video_hidden = document.getElementById("compVideo" + (1 - activeVidID));
-    video_active.src = "videos/comparison/" + pill + "_" + method + "_vs_ours_" + mode + ".mp4";
+    video_active.src = "videos/comparison/" + pill + "_vs_ours_" + mode + ".mp4";
     video_active.load();
 
     if (n_views) {
