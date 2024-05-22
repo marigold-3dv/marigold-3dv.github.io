@@ -124,11 +124,11 @@
 
 
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <video id="teaser-video-ours" width="100%" autoplay loop muted controls>
                   <source src="videos/h264_record3d_sheep.mp4" type="video/mp4" />
-                </video>
+                </video> -->
 <!-- 
                 <video id="teaser-video-ours" width="100%" autoplay loop muted>
                   <source src="videos/teaser/grid_ours.mp4" type="video/mp4" />
@@ -162,8 +162,8 @@
                     }
                 </script>
  -->
-			</div>
-        </div>
+			<!-- </div>
+        </div> -->
 
 
         <div class="row">
@@ -172,8 +172,8 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    Marigold is a novel method of monocular depth estimation. In this 3DV project, we hope to evaluate the effectiveness of Marigold depth in 3D reconstruction. 
-                    Neural Radiance Fields (NeRFs) recently shows superior performance in 3D reconstruction. However, NeRFs require a large number of input images to recover a high-quality 3D model. So we aim to evaluate the performance of Marigold in 3D reconstruction with sparse inputs.
+                    Marigold is a novel method of monocular depth estimation. In this 3DV project, we analyse the performance of Marigold in various datasets, and evaluate the effectiveness of Marigold depth in downsream tasks, e.g. 3D reconstruction, pose estimation. 
+                    In terms of scene reconstruction, Neural Radiance Fields (NeRFs) recently shows superior performance in 3D reconstruction. However, NeRFs require a large number of input images to recover a high-quality 3D model. We evaluated the performance of Marigold in 3D reconstruction with sparse inputs.
                 </p>
             </div>
         </div>
@@ -184,6 +184,9 @@
                 <h3>
                     Method
                 </h3>
+                <h4>
+                    3D Reconstruction with Marigold Depth
+                </h4>
                 <br>
                 <!-- <h3>
 				  <b> <font color="#118ab2"></font><font color="#ef486e">Fusion</font></b> = <font color="#118ab2">3D Reconstruction</font>  + <font color="#ef486e">Diffusion Prior</font>
@@ -194,7 +197,7 @@
                     Marigold only predict affine-invariant depth, which could not be directly used for depth supervision. We need to align the scale and offset of Marigold depth with metric depth and use adjusted depth to supervise NeRF training. We jointly optimize the scale, offset and NeRF representation. We used nerfacto as our NeRF backbone due to its fast speed.
                 </p>
             </div>
-        </div><br><br>
+        </div><br>
 	<!-- <div class="row">
 		<div class="col-md-8 col-md-offset-2">
 		<h3> ReconFusion enables high-quality 3D reconstruction from few views</h3><br>
@@ -214,7 +217,7 @@
 				  Results
                 </h3><br>
                 <h4>
-                    3D reconstruction with sparse inputs
+                    3D Reconstruction with Marigold Depth
                   </h4><br>
 
                 <div class="text-center ">
@@ -305,7 +308,7 @@
 
                 <br>
                 <p class="text-justify" style="text-align: center;">
-                    Nerfacto (left) vs Ours (right) on LLFF dataset. Scene trained on <span id="compVideoValue">3</span> views. Try selecting scenes!
+                    Nerfacto (left) vs Ours (right) on Record3D dataset. Scene trained on <span id="compVideoValue">9</span> views. Try selecting scenes!
                 </p>
                     <!-- <script>
                         video0 = document.getElementById("compVideo0");
@@ -499,7 +502,7 @@
                     Acknowledgements
                 </h3>
                 <p class="text-justify">
-                We would like to thank Arthur Brussee, Ricardo Martin-Brualla, Rick Szeliski, Peter Hedman, Jason Baldridge, and Angjoo Kanazawa for their valuable contributions in discussing the project and reviewing the manuscript, and Zhicheng Wang for setting up some of the data loaders necessary for our diffusion model training pipeline. We are grateful to Randy Persaud and Henna Nandwani for infrastructure support. We also extend our gratitude to Shlomi Fruchter, Kevin Murphy, Mohammad Babaeizadeh, Han Zhang and Amir Hertz for training the base text-to-image latent diffusion model.
+                We would like to thank our supervisors Mihai Dusmanu and Zuria Bauer for their valuable guidance in this 3DV project.
                     <br><br>
                 The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a> and <a href="https://dorverbin.github.io/refnerf">Ref-NeRF</a>.
                 </p>
