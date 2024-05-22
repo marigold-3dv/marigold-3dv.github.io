@@ -38,4 +38,7 @@ function selectCompVideo(methodPill) {
     var video_active = document.getElementById("compVideo0");
     video_active.src = src;
     video_active.load();
+    var pills = document.querySelectorAll(`#${areaId} .method-pill`);
+    pills.forEach(pill => pill.classList.remove('active'));
+    element.classList.add('active');
 }
