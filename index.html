@@ -259,19 +259,6 @@
                             <source src="videos/flower.mp4" />
                         </video>
                     </div>
-                    <div class="text-center" style="color: black;" id="mode-pills">
-                        <div class="btn-group btn-group-sm">
-                            <span class="btn btn-primary mode-pill active" data-value="rgb"
-                                onclick="selectCompVideo(activeMethodPill, activeScenePill, null, this)">
-                                RGB
-                            </span>
-                            <span class="btn btn-primary mode-pill" data-value="depth"
-                                onclick="selectCompVideo(activeMethodPill, activeScenePill, null, this)">
-                                Depth
-                            </span>
-                        </div>
-                    </div>
-
 
                     <br>
                     <p class="text-justify" style="text-align: center;">
@@ -300,43 +287,8 @@
                         });
                     </script>
 
-                    <div class="pill-row scene-pills" id="scene-pills">
-                        <span class="pill scene-pill" data-value="dtu_scan31" onclick="selectCompVideo(activeMethodPill, this, 3)">
-                            <img class="thumbnail-img" src="thumbnails/dtu_scan31_thumbnail.jpg" alt="DTU/scan31" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="dtu_scan45" onclick="selectCompVideo(activeMethodPill, this, 3)">
-                            <img class="thumbnail-img" src="thumbnails/dtu_scan45_thumbnail.jpg" alt="DTU/scan45" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="llff_fern" onclick="selectCompVideo(activeMethodPill, this, 3)">
-                            <img class="thumbnail-img" src="thumbnails/llff_fern_thumbnail.jpg" alt="LLFF/fern" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="llff_horns" onclick="selectCompVideo(activeMethodPill, this, 3)">
-                            <img class="thumbnail-img" src="thumbnails/llff_horns_thumbnail.jpg" alt="LLFF/horns" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="re10k_00e8df74b6805da7" onclick="selectCompVideo(activeMethodPill, this, 3)">
-                            <img class="thumbnail-img" src="thumbnails/re10k_00e8df74b6805da7_thumbnail.jpg" alt="Re10K/sofa" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="re10k_000c3ab189999a83" onclick="selectCompVideo(activeMethodPill, this, 3)">
-                            <img class="thumbnail-img" src="thumbnails/re10k_000c3ab189999a83_thumbnail.jpg" alt="Re10K/living room" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="co3d_bench_185_19987_38634" onclick="selectCompVideo(activeMethodPill, this, 6)">
-                            <img class="thumbnail-img" src="thumbnails/co3d_bench_185_19987_38634_thumbnail.jpg" alt="CO3D/bench" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="co3d_plant_188_20319_36755" onclick="selectCompVideo(activeMethodPill, this, 6)">
-                            <img class="thumbnail-img" src="thumbnails/co3d_plant_188_20319_36755_thumbnail.jpg" alt="CO3D/plant" width="64">
-                        </span>
-                        <span class="pill scene-pill active" data-value="mipnerf360_bonsai" onclick="selectCompVideo(activeMethodPill, this, 9)">
-                            <img class="thumbnail-img" src="thumbnails/mipnerf360_bonsai_thumbnail.jpg" alt="mip-NeRF 360/bonsai" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="mipnerf360_kitchen" onclick="selectCompVideo(activeMethodPill, this, 9)">
-                            <img class="thumbnail-img" src="thumbnails/mipnerf360_kitchen_thumbnail.jpg" alt="mip-NeRF 360/kitchen" width="64">
-                        </span>
-                    </div>
-
                     <script>
                         activeMethodPill = document.querySelector('.method-pill.active-pill');
-                        activeScenePill = document.querySelector('.scene-pill.active-pill');
-                        activeModePill = document.querySelector('.mode-pill.active-pill');
                     </script>
                 </div>
             </div>
