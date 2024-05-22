@@ -23,46 +23,19 @@ $(document).ready(function () {
     resizeAndPlay($('#sparsity')[0]);
 });
 
-function selectCompVideo(methodPill, scenePill, n_views, modePill) {
+function selectCompVideo(methodPill) {
     // Your existing logic for video selection
     // var video = document.getElementById("compVideo");
-    select = true;
-    var videoSwitch = document.getElementById("compVideoSwitch");
-    var viewNum = document.getElementById("compVideoValue");
-
     if (activeMethodPill) {
         activeMethodPill.classList.remove("active");
     }
-    if (activeScenePill) {
-        activeScenePill.classList.remove("active");
-    }
-    if (modePill) {
-        activeModePill.classList.remove("active");
-        modePill.classList.add("active");
-        activeModePill = modePill;
-    }
     activeMethodPill = methodPill;
-    activeScenePill = scenePill;
     methodPill.classList.add("active");
-    scenePill.classList.add("active");
     method = methodPill.getAttribute("data-value");
-    pill = scenePill.getAttribute("data-value");
-    mode = activeModePill.getAttribute("data-value");
+    var src = "videos/h264_" + method + ".mp4";
+    console.log(src);
 
-    // if (videoSwitch.checked) {
-    //     mode = 'depth'
-    // } else {
-    //     mode = 'rgb'
-    // }
-
-    // swap video to avoid flickering
-    activeVidID = 1 - activeVidID;
-    var video_active = document.getElementById("compVideo" + activeVidID);
-    var video_hidden = document.getElementById("compVideo" + (1 - activeVidID));
-    video_active.src = "videos/" + pill + "_vs_ours_" + mode + ".mp4";
+    var video_active = document.getElementById("compVideo0");
+    video_active.src = src;
     video_active.load();
-
-    if (n_views) {
-        viewNum.innerHTML = n_views;
-    }
 }
