@@ -101,7 +101,7 @@
             <div class="col-md-12 text-center">
                 <sup>1</sup>ETH Zurich
 
-
+<!-- 
         <div class="row text-center">
 					
 			     <span class="link-block">
@@ -120,7 +120,7 @@
                   <span>Data</span>
                 </a>
               </span>
-			</div>
+			</div> -->
 
 
 
@@ -211,8 +211,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-				  ReconFusion outperforms other few-view NeRF methods
+				  Results
                 </h3><br>
+                <h4>
+                    3D reconstruction with sparse inputs
+                  </h4><br>
 
                 <div class="text-center ">
                     <ul class="nav nav-pills center-pills">
@@ -220,8 +223,10 @@
                             onclick="selectCompVideo(this, activeScenePill)"><a>Fortress</a></li>
                         <li class="method-pill" data-value="leaves"
                             onclick="selectCompVideo(this, activeScenePill)"><a>Leaves</a></li>
-                            <li class="method-pill" data-value="orchids"
+                        <li class="method-pill" data-value="orchids"
                             onclick="selectCompVideo(this, activeScenePill)"><a>Orchids</a></li>
+                        <li class="method-pill" data-value="room"
+                            onclick="selectCompVideo(this, activeScenePill)"><a>Room</a></li>
                     </ul>
                     <ul class="nav nav-pills center-pills">
                         <li class="method-pill" data-value="fern"
@@ -230,8 +235,8 @@
                             onclick="selectCompVideo(this, activeScenePill)"><a>Flower</a></li>
                         <li class="method-pill" data-value="horns"
                             onclick="selectCompVideo(this, activeScenePill)"><a>Horns</a></li>
-                        <li class="method-pill" data-value="room"
-                            onclick="selectCompVideo(this, activeScenePill)"><a>Room</a></li>
+                        <li class="method-pill" data-value="trex"
+                            onclick="selectCompVideo(this, activeScenePill)"><a>Trex</a></li>
                     </ul>
                 </div>
 
@@ -250,7 +255,7 @@
 
                     <br>
                     <p class="text-justify" style="text-align: center;">
-                        Baseline method (left) vs Ours (right). Scene trained on <span id="compVideoValue">9</span> views. Try selecting different methods and scenes!
+                        Nerfacto (left) vs Ours (right) on LLFF dataset. Scene trained on <span id="compVideoValue">3</span> views. Try selecting scenes!
                     </p>
                     <script>
                         video0 = document.getElementById("compVideo0");
@@ -271,6 +276,57 @@
                 </div>
             </div>
         </div>
+
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+
+                <div class="text-center ">
+                    <ul class="nav nav-pills center-pills">
+                        <li class="method-pill active" data-value="h264_record3d_sheep"
+                            onclick="selectCompVideo(this, activeScenePill)"><a>Sheep</a></li>
+                        <li class="method-pill" data-value="h264_record3d_flower"
+                            onclick="selectCompVideo(this, activeScenePill)"><a>Flower</a></li>
+                    </ul>
+                </div>
+
+                <script>
+                    activeMethodPill = document.querySelector('.method-pill.active-pill');
+                    activeScenePill = document.querySelector('.scene-pill.active-pill');
+                    activeModePill = document.querySelector('.mode-pill.active-pill');
+                </script>
+                
+                <div class="text-center">
+                    <div class="video-container">
+                        <video class="video" style="height: 280px; max-width: 100%;" m id="compVideo0" loop playsinline autoplay muted>
+                            <source src="videos/h264_fortress.mp4" />
+                        </video>
+                    </div>
+
+                    <br>
+                    <p class="text-justify" style="text-align: center;">
+                        Nerfacto (left) vs Ours (right) on LLFF dataset. Scene trained on <span id="compVideoValue">3</span> views. Try selecting scenes!
+                    </p>
+                    <script>
+                        video0 = document.getElementById("compVideo0");
+                        video0.addEventListener('loadedmetadata', function() {
+                            if (activeVidID == 0 && select){
+                                video0.play();
+                                // print video size
+                                console.log(video0.videoWidth, video0.videoHeight);
+                                video0.hidden = false;
+                                video1.hidden = true;
+                            }
+                        });
+                    </script>
+
+                    <script>
+                        activeMethodPill = document.querySelector('.method-pill.active-pill');
+                    </script>
+                </div>
+            </div>
+        </div>
+
         <br>
         <br>
 
