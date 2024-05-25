@@ -66,7 +66,7 @@
     <!-- <div class="container" id="main"> -->
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <b>Marigold</b>: Is it all sunshine and Marigolds?
+                <b>Marigold</b>: Is it all sunshine and Marigolds?</br>
             </h2>
         </div>
         <div class="row text-center">
@@ -276,8 +276,6 @@
                             <source id="sourceArea1" src="videos/h264_fortress.mp4" type="video/mp4" />
                         </video>
                     </div>
-
-                    <br>
                     <p class="text-justify" style="text-align: center;">
                         Nerfacto (left) vs Ours (right) on LLFF dataset. Scene trained on <span id="compVideoValue">3</span> views. Try selecting scenes!
                     </p>
@@ -297,6 +295,7 @@
                     <script>
                         activeMethodPill = document.querySelector('.method-pill.active-pill'); -->
                     <!-- </script> -->
+                    <br>
                 </div>
             </div>
 
@@ -348,13 +347,16 @@
                         </script> -->
                 </div>
             </div>
+            <br>
 
             <div class="col-md-8 col-md-offset-2" id="area3">
-                <div class="text-center ">
-                    <p class="text-justify" style="text-align: center;">
-                        Nerfacto (left) vs Ours (right) on Record3D dataset. Scene trained on <span id="compVideoValue">9</span> views. Try selecting scenes!
-                    </p>
-                </div>
+                <h4>
+                    Camera Pose Estimation with Marigold
+                </h4>
+                <p class="text-justify" style="text-align: center;">
+                    We sample the first 10 frames from original datasets at intervals of 5 frames.
+                </p>
+                <image src="img/pose_est_table.png" width=60% style="display: block; margin: auto;"></image>
             </div>
 
         </div>
