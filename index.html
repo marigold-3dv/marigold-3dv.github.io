@@ -118,7 +118,7 @@
                 <span>Code</span>
             </a>
             </span>
-        </div>
+    </div>
 
 
 
@@ -194,7 +194,7 @@
                 </p >
 
                 <h4>
-                    3D Reconstruction with Marigold Depth
+                    <b>3D Reconstruction with Marigold Depth</b>
                 </h4>
                 <br>
                 <!-- <h3>
@@ -207,7 +207,7 @@
                 </p>
 
                 <h4>
-                    Camera Pose Estimation with Marigold
+                    <b>Camera Pose Estimation with Marigold</b>
                 </h4>
                 <br>
                 <image src="img/overview_pose.png" width=60% style="display: block; margin: auto;"></image>
@@ -297,57 +297,56 @@
                     <!-- </script> -->
                 </div>
             </div>
-        <!-- </div> -->
 
-        <br>
-        <!-- <div class="row"> -->
-        <div class="col-md-8 col-md-offset-2" id="area2">
+            <br>
+            <!-- <div class="row"> -->
+            <div class="col-md-8 col-md-offset-2" id="area2">
 
-            <div class="text-center ">
-                <ul class="nav nav-pills center-pills">
-                    <li class="method-pill active" data-value="record3d_sheep"
-                        onclick="selectCompVideo(this, 'area2')"><a>Sheep</a></li>
-                    <li class="method-pill" data-value="record3d_flower"
-                        onclick="selectCompVideo(this, 'area2')"><a>Flower</a></li>
-                </ul>
-            </div>
-
-                <!-- <script>
-                    activeMethodPill = document.querySelector('.method-pill.active-pill');
-                    activeScenePill = document.querySelector('.scene-pill.active-pill');
-                    activeModePill = document.querySelector('.mode-pill.active-pill');
-                </script> -->
-
-            <div class="text-center">
-                <div class="video-container">
-                    <video class="video" style="height: 280px; max-width: 100%;" id="compVideoArea2" loop playsinline autoplay muted>
-                        <source id="sourceArea2" src="videos/h264_record3d_sheep.mp4" type="video/mp4" />
-                    </video>
+                <div class="text-center ">
+                    <ul class="nav nav-pills center-pills">
+                        <li class="method-pill active" data-value="record3d_sheep"
+                            onclick="selectCompVideo(this, 'area2')"><a>Sheep</a></li>
+                        <li class="method-pill" data-value="record3d_flower"
+                            onclick="selectCompVideo(this, 'area2')"><a>Flower</a></li>
+                    </ul>
                 </div>
-
-                <br>
-                <p class="text-justify" style="text-align: center;">
-                    Nerfacto (left) vs Ours (right) on Record3D dataset. Scene trained on <span id="compVideoValue">9</span> views. Try selecting scenes!
-                </p>
-                    <!-- <script>
-                        video0 = document.getElementById("compVideo0");
-                        video0.addEventListener('loadedmetadata', function() {
-                            if (activeVidID == 0 && select){
-                                video0.play();
-                                // print video size
-                                console.log(video0.videoWidth, video0.videoHeight);
-                                video0.hidden = false;
-                                video1.hidden = true;
-                            }
-                        });
-                    </script> -->
 
                     <!-- <script>
                         activeMethodPill = document.querySelector('.method-pill.active-pill');
+                        activeScenePill = document.querySelector('.scene-pill.active-pill');
+                        activeModePill = document.querySelector('.mode-pill.active-pill');
                     </script> -->
+
+                <div class="text-center">
+                    <div class="video-container">
+                        <video class="video" style="height: 280px; max-width: 100%;" id="compVideoArea2" loop playsinline autoplay muted>
+                            <source id="sourceArea2" src="videos/h264_record3d_sheep.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+
+                    <br>
+                    <p class="text-justify" style="text-align: center;">
+                        Nerfacto (left) vs Ours (right) on Record3D dataset. Scene trained on <span id="compVideoValue">9</span> views. Try selecting scenes!
+                    </p>
+                        <!-- <script>
+                            video0 = document.getElementById("compVideo0");
+                            video0.addEventListener('loadedmetadata', function() {
+                                if (activeVidID == 0 && select){
+                                    video0.play();
+                                    // print video size
+                                    console.log(video0.videoWidth, video0.videoHeight);
+                                    video0.hidden = false;
+                                    video1.hidden = true;
+                                }
+                            });
+                        </script> -->
+
+                        <!-- <script>
+                            activeMethodPill = document.querySelector('.method-pill.active-pill');
+                        </script> -->
+                </div>
             </div>
         </div>
-    </div>
 
         <br>
         <br>
