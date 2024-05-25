@@ -66,7 +66,7 @@
     <!-- <div class="container" id="main"> -->
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <b>Marigold</b>: Is it all sunshine and Marigolds?</br> 
+                <b>Marigold</b>: Is it all sunshine and Marigolds?</br>
             </h2>
         </div>
         <div class="row text-center">
@@ -95,7 +95,7 @@
                     <!-- </br>Google -->
                 </ul>
             </div>
-            
+
 <div class="col-md-3">
     </div>
             <div class="col-md-12 text-center">
@@ -104,7 +104,7 @@
 
         <br>
         <div class="row text-center">
-					
+
 			     <span class="link-block">
                 <!-- <a href="https://arxiv.org/abs/2312.02981"
                    class="external-link button is-normal is-rounded is-dark">
@@ -130,7 +130,7 @@
                 <video id="teaser-video-ours" width="100%" autoplay loop muted controls>
                   <source src="videos/h264_record3d_sheep.mp4" type="video/mp4" />
                 </video> -->
-<!-- 
+<!--
                 <video id="teaser-video-ours" width="100%" autoplay loop muted>
                   <source src="videos/teaser/grid_ours.mp4" type="video/mp4" />
                 </video>
@@ -173,7 +173,7 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    Marigold is a novel method of monocular depth estimation. In this 3DV project, we analyse the performance of Marigold in various datasets, and evaluate the effectiveness of Marigold depth in downsream tasks, e.g. 3D reconstruction, pose estimation. 
+                    Marigold is a novel method of monocular depth estimation. In this 3DV project, we analyse the performance of Marigold in various datasets, and evaluate the effectiveness of Marigold depth in downsream tasks, e.g. 3D reconstruction, pose estimation.
                     In terms of scene reconstruction, Neural Radiance Fields (NeRFs) recently shows superior performance in 3D reconstruction. However, NeRFs require a large number of input images to recover a high-quality 3D model. We evaluated the performance of Marigold in 3D reconstruction with sparse inputs.
                 </p>
             </div>
@@ -196,6 +196,16 @@
                 <br>
                 <p class="text-justify">
                     Marigold only predict affine-invariant depth, which could not be directly used for depth supervision. We need to align the scale and offset of Marigold depth with metric depth and use adjusted depth to supervise NeRF training. We jointly optimize the scale, offset and NeRF representation. We used nerfacto as our NeRF backbone due to its fast speed.
+                </p>
+
+                <h4>
+                    Camera Pose Estimation with Marigold
+                </h4>
+                <br>
+                <image src="img/overview_pose.png" width=60% style="display: block; margin: auto;"></image>
+                <br>
+                <p class="text-justify">
+                    To estimate camera poses using 
                 </p>
             </div>
         </div><br>
@@ -249,7 +259,7 @@
                     activeScenePill = document.querySelector('.scene-pill.active-pill');
                     activeModePill = document.querySelector('.mode-pill.active-pill');
                 </script> -->
-                
+
                 <div class="text-center">
                     <div class="video-container">
                         <video class="video" style="height: 280px; max-width: 100%;" id="compVideoArea1" loop playsinline autoplay muted>
@@ -299,7 +309,7 @@
                     activeScenePill = document.querySelector('.scene-pill.active-pill');
                     activeModePill = document.querySelector('.mode-pill.active-pill');
                 </script> -->
-                
+
             <div class="text-center">
                 <div class="video-container">
                     <video class="video" style="height: 280px; max-width: 100%;" id="compVideoArea2" loop playsinline autoplay muted>
@@ -342,7 +352,7 @@
                 <p class="text-justify" style="color:red">
                     Hover over the plot to show rendered video under different number of views.
                 </p> -->
-                
+
                 <!-- top down layout -->
                 <!-- <canvas id="sparsityChart" style="max-height: 300px; max-width: 500px; margin: auto;"></canvas>
                 <script src="js/sparsity_chart.js"></script>
@@ -350,7 +360,7 @@
                 <p class="text-center">
                     Our diffusion prior improves performance over baseline Zip-NeRF in both the few-view and many-view sampling regimes.
                 </p>
-    
+
                 <div class="text-center">
                     <div class="video-compare-container" id="materialsDiv">
                         <video class="video" id="sparsity" loop playsinline autoPlay muted src="videos/sparsity/stacked_vid.mp4" onplay="resizeAndPlay(this)"></video>
@@ -386,7 +396,7 @@
                         Rendered video under <span id="sparsityValue" style="color: red;">3</span> views
                     </div> -->
                 <!-- </div> -->
-                
+
                 <!-- left right layout -->
                 <!-- <table style="width: 100%; border-collapse: collapse;">
                     <tr>
@@ -414,7 +424,7 @@
                 <h3>
                     ReconFusion distills a consistent 3D model from inconsistent samples
                 </h3><br>
-                
+
                 <table style="margin-left: auto; margin-right: auto; width: 90%;">
                     <tr>
                       <th style="width: 4%;"></th>
@@ -465,7 +475,7 @@
                     <!-- </tr>
                 </table>
                 <br> -->
-<!-- 
+<!--
                 <p class="text-justify" style="width: 85%; margin: auto;"> -->
                 <!-- <p class="text-justify" style="width:85%; margin:auto">
                     ReconFusion recovers consistent 3D reconstructions (top) from a diffusion model that produces image samples independently for each viewpoint (bottom). These samples are not multiview consistent, but can produce high-quality 3D reconstructions when used as a prior in optimization.
@@ -485,9 +495,9 @@
                     <textarea id="bibtex" class="form-control" readonly>
 @article{wu2023reconfusion,
     title={ReconFusion: 3D Reconstruction with Diffusion Priors},
-    author={Rundi Wu and Ben Mildenhall and Philipp Henzler and 
-			Keunhong Park and Ruiqi Gao and Daniel Watson and 
-			Pratul P. Srinivasan and Dor Verbin and Jonathan T. Barron 
+    author={Rundi Wu and Ben Mildenhall and Philipp Henzler and
+			Keunhong Park and Ruiqi Gao and Daniel Watson and
+			Pratul P. Srinivasan and Dor Verbin and Jonathan T. Barron
 			and Ben Poole and Aleksander Holynski},
     journal={arXiv},
     year={2023}
