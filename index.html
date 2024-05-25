@@ -90,7 +90,7 @@
                             Feng Tian
                         <sup>1</sup>
                     </li>
-                    <!-- <wbr> -->
+                    <wbr>
                 </ul>
                 <div class="col-md-12 text-center">
                     <sup>1</sup>ETH Zurich
@@ -181,6 +181,17 @@
                 <h3>
                     Method
                 </h3>
+                
+                <h4>
+                    Marigold Depth Evaluation
+                </h4>
+
+                <image src="img/overview_eval.png" width=60% style="display: block; margin: auto;"></image>
+                <br>
+                <p class="text-justify">
+                    Marigold only predict affine-invariant depth, which could not be directly used for depth supervision. We need to align the scale and offset of Marigold depth with metric depth and use adjusted depth to supervise NeRF training. We jointly optimize the scale, offset and NeRF representation. We used nerfacto as our NeRF backbone due to its fast speed.
+                </p >
+
                 <h4>
                     3D Reconstruction with Marigold Depth
                 </h4>
