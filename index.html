@@ -172,7 +172,7 @@
                 </h3>
                 <p class="text-justify">
                     Marigold is a novel method of monocular depth estimation, which can predict affine-invariant depth from a single RGB image. In this 3DV project, we analyzed the performance of Marigold in various datasets, and evaluated the effectiveness of Marigold depth in downsream tasks, e.g. 3D reconstruction, pose estimation.
-                    In terms of scene reconstruction, Neural Radiance Fields (NeRFs) recently showed superior performance in 3D reconstruction. However, NeRFs require a large number of input images to recover a high-quality 3D model. We evaluated the performance of Marigold in 3D reconstruction with sparse inputs. In terms of camera pose estimation, we implemented an effective optimization pipeline based on FrozenRecon, to estimate the camera poses while aligning the outputs of Marigold to scale-consistent depth maps.
+                    In terms of scene reconstruction, Neural Radiance Fields (NeRFs) recently showed superior performance in 3D reconstruction. However, NeRFs require a large number of input images to recover a high-quality 3D model. We evaluated the performance of Marigold in 3D reconstruction with sparse inputs. In terms of camera pose estimation, we implemented an effective optimization method based on FrozenRecon, to estimate the camera poses while aligning the outputs of Marigold to scale-consistent depths.
                 </p>
             </div>
         </div>
@@ -352,7 +352,7 @@
                 <h4>
                     Camera Pose Estimation with Marigold
                 </h4>
-                <image src="img/pose_est_table.png" width=90% style="display: block; margin: auto;"></image>
+                <image src="img/pose_est_table.png" width=100% style="display: block; margin: auto;"></image>
                 <image src="img/frame10_result.png" width=100% style="display: block; margin: auto;"></image>
                 <p class="text-justify" style="text-align: center;">
                     Colmap, FrozenRecon vs Ours on ScanNet dataset.
@@ -367,7 +367,7 @@
                 <p class="text-justify">
                     Our method, Colmap, and FrozenRecon all might fail when the camera motion is in a nearly straight line or too fast, or the interval between frames is too large. Here we show some failure cases on KITTI (fast and nearly straight line motion) and ScanNet with sampling interval of 100 frames.
                 </p>
-                <image src="img/fail_cases.png" width=90% style="display: block; margin: auto;"></image>
+                <image src="img/fail_cases.png" width=95% style="display: block; margin: auto;"></image>
             </div>
 
         </div>
