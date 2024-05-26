@@ -295,7 +295,7 @@
                     <script>
                         activeMethodPill = document.querySelector('.method-pill.active-pill'); -->
                     <!-- </script> -->
-                    <br>
+                    <!-- <br> -->
                 </div>
             </div>
 
@@ -324,7 +324,7 @@
                             <source id="sourceArea2" src="videos/h264_record3d_sheep.mp4" type="video/mp4" />
                         </video>
                     </div>
-                    <p class="text-justify" style="text-align: center; margin-bottom: 1.5em;">
+                    <p class="text-justify" style="text-align: center; margin-bottom: 2em;">
                         Nerfacto (left) vs Ours (right) on Record3D dataset. Scene trained on <span id="compVideoValue">9</span> views. Try selecting scenes!
                     </p>
                         <!-- <script>
@@ -359,6 +359,8 @@
                 <p class="text-justify" style="text-align: center;font-size: 12px;">
                     Sample the first 10 frames from original datasets at intervals of 5 frames for test, as it takes too much time for Marigold and optimization to run on the entire dataset.
                 </p>
+                <br>
+
                 <h4>
                     Limitation Analysis of Camera Pose Estimation
                 </h4>
@@ -379,7 +381,7 @@
                 <h4>
                     What Marigold is Good at
                 </h4>
-                <image src="img/advantage.png" width=60% style="display: block; margin: auto;"></image>
+                <image src="img/good_at.png" width=60% style="display: block; margin: auto;"></image>
                 <p class="text-justify">
                     Marigold is good at <b>estimating depth for objects with distinctive features</b>. Such as for The microphone in the red rectangle. Its depth even cannot be captured by sensor, but it can be estimated by Marigold. And Marigold can <b>prevent from being influenced by mirror</b>.
                 </p>
@@ -388,8 +390,8 @@
                 <h4>
                     What Marigold is Not Good at: Edges, and Too Close or too Far Objects
                 </h4>
-                <image src="img/edge.png" width=40% style="display: block; margin: auto;"></image>
-                <image src="img/far_close.png" width=60% style="display: block; margin: auto;"></image>
+                <image src="img/not_good_at.png" width=60% style="display: block; margin: auto;"></image>
+                <!-- <image src="img/far_close.png" width=60% style="display: block; margin: auto;"></image> -->
                 <br>
 
                 <h4>
