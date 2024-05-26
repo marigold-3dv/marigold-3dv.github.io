@@ -200,7 +200,7 @@
                 <!-- <h3>
 				  <b> <font color="#118ab2"></font><font color="#ef486e">Fusion</font></b> = <font color="#118ab2">3D Reconstruction</font>  + <font color="#ef486e">Diffusion Prior</font>
                 </h3> -->
-                <image src="img/overview_recon.jpg" width=60% style="display: block; margin: auto;"></image>
+                <image src="img/overview_recon.png" width=60% style="display: block; margin: auto;"></image>
                 <br>
                 <p class="text-justify">
                     Marigold only predict affine-invariant depth, which could not be directly used for depth supervision. We need to align the scale and offset of Marigold depth with metric depth and use adjusted depth to supervise NeRF training. We jointly optimize the scale, offset and NeRF representation. We use nerfacto as our NeRF backbone due to its fast speed.
