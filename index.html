@@ -213,7 +213,7 @@
                 <image src="img/overview_pose.png" width=60% style="display: block; margin: auto;"></image>
                 <br>
                 <p class="text-justify">
-                    To estimate camera poses using
+                    We implement an optimization pipeline (primarily based on FrozenRecon) to estimate camera poses. We jointly optimize the scale (global scale) and offset (global offset) for each image, as well as camera poses, camera focal lengths, and point weights used for local alignment. A local alignment module is utilized to guide the optimization of parameters, and accelerate convergence. The loss function consists of color and depth warping losses, along with a regularization term to enforce the point weights close to 1.
                 </p>
             </div>
         </div><br>
@@ -363,11 +363,11 @@
                     Limitation Analysis of Camera Pose Estimation
                 </h4>
                 <p class="text-justify" style="text-align: center;">
-                    Here we show some failure cases on KITTI (fast and nearly straight line motion) and ScanNet with large sampling interval of 100 frames.
+                    Here we show some failure cases on KITTI (nearly straight line motion with small differences between frames) and ScanNet with large sampling interval of 100 frames.
                </p>
                 <image src="img/fail_cases.png" width=95% style="display: block; margin: auto;"></image>
                 <p class="text-justify" style="text-align: center;">
-                    Our method, Colmap, and FrozenRecon all might fail when the camera motion is in a nearly straight line or too fast, or the interval between frames is too large.
+                    Our method and FrozenRecon both might fail when the camera motion is in a nearly straight line, differences between frames are small, or the interval between frames is too large.
                 </p>
             </div>
             <br>
