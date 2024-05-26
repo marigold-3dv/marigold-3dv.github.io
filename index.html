@@ -352,7 +352,7 @@
                 <h4>
                     Camera Pose Estimation with Marigold
                 </h4>
-                <image src="img/pose_est_table.png" width=100% style="display: block; margin: auto;"></image>
+                <image src="img/pose_est_table.png" width=95% style="display: block; margin: auto;"></image>
                 <image src="img/frame10_result.png" width=100% style="display: block; margin: auto;"></image>
                 <p class="text-justify" style="text-align: center;">
                     Colmap, FrozenRecon vs Ours on ScanNet dataset.
@@ -360,7 +360,6 @@
                 <p class="text-justify" style="text-align: center;font-size: 12px;">
                     Sample the first 10 frames from original datasets at intervals of 5 frames for test, as it takes too much time for Marigold and optimization to run on the entire dataset.
                 </p>
-                <br>
                 <h4>
                     Limitation Analysis of Camera Pose Estimation
                 </h4>
@@ -369,7 +368,32 @@
                 </p>
                 <image src="img/fail_cases.png" width=95% style="display: block; margin: auto;"></image>
             </div>
+            <br>
+        </div>
+        <br>
 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Marigold Depth Evaluation
+                </h3>
+                <h4>
+                    What Marigold is Good at
+                </h4>
+                <image src="img/advantage.png" width=95% style="display: block; margin: auto;"></image>
+                <p class="text-justify" style="text-align: center;">
+                    Marigold is good at <b>estimating depth for objects with distinctive features</b>. Such as for The microphone in the red rectangle. Its depth cannot even be captured in groundtruth. But it can be estimated by Marigold. And Marigold can prevent from being influenced by mirror. In the example below, the objects in the mirror shouldn’t have depth difference, but it exists in the groundtruth. While Marigold can predict it correctly. In addition, Marigold can be used to <b>correct the bad data caused by Mirror</b>.
+                </p>
+                <h4>
+                    What Marigold is Not Good at: Edges, and Too Close or too Far Objects
+                </h4>
+                <image src="img/edge.png" width=95% style="display: block; margin: auto;"></image>
+                <image src="img/far_close.png" width=95% style="display: block; margin: auto;"></image>
+                <h4>
+                    Quantitative Evaluation
+                </h4>
+                <image src="img/evaluate_result.png" width=95% style="display: block; margin: auto;"></image>
+            </div>
         </div>
 
         <br>
