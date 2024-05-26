@@ -207,6 +207,7 @@
                 <p class="text-justify">
                     Marigold only predict affine-invariant depth, which could not be directly used for depth supervision. We need to align the scale and offset of Marigold depth with metric depth and use adjusted depth to supervise NeRF training. We jointly optimize the scale, offset and NeRF representation. We used nerfacto as our NeRF backbone due to its fast speed.
                 </p>
+                <br>
 
                 <h4>
                     Camera Pose Estimation with Marigold
@@ -324,7 +325,7 @@
                             <source id="sourceArea2" src="videos/h264_record3d_sheep.mp4" type="video/mp4" />
                         </video>
                     </div>
-                    <p class="text-justify" style="text-align: center; margin-bottom: 2em;">
+                    <p class="text-justify" style="text-align: center; margin-bottom: 1em;">
                         Nerfacto (left) vs Ours (right) on Record3D dataset. Scene trained on <span id="compVideoValue">9</span> views. Try selecting scenes!
                     </p>
                         <!-- <script>
@@ -346,17 +347,19 @@
                 </div>
             </div>
             <br>
-            <br>
 
             <div class="col-md-8 col-md-offset-2" id="area3">
                 <h4>
                     Camera Pose Estimation with Marigold
                 </h4>
                 <p class="text-justify" style="text-align: center;">
-                    Colmap, FrozenRecon vs Ours on ScanNet dataset. Sample the first 10 frames from original datasets at intervals of 5 frames for test, as it takes too much time and GPU memory for Marigold and optimization to run on the entire dataset.
+                    Colmap, FrozenRecon vs Ours on ScanNet dataset.
                 </p>
                 <image src="img/pose_est_table.png" width=80% style="display: block; margin: auto;"></image>
-                <image src="img/frame10_result.png" width=60% style="display: block; margin: auto;"></image>
+                <image src="img/frame10_result.png" width=80% style="display: block; margin: auto;"></image>
+                <p class="text-justify" style="text-align: center;font-size: 12px;">
+                    Sample the first 10 frames from original datasets at intervals of 5 frames for test, as it takes too much time for Marigold and optimization to run on the entire dataset.
+                </p>
             </div>
 
         </div>
