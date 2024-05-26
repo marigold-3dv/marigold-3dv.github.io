@@ -191,7 +191,7 @@
                 <image src="img/overview_eval.png" width=60% style="display: block; margin: auto;"></image>
                 <br>
                 <p class="text-justify">
-                    Marigold.
+                    To evaluate Marigold performance, we run Marigold on various dataset with groundtruth depth, and align the affine-invariant depth from Marigold with the groundtruth by RANSAC. Then we compare the aligned depth and groundtruth depth qualitatively and quantitatively using relative absolute error.
                 </p >
                 <br>
 
@@ -205,7 +205,7 @@
                 <image src="img/overview.jpg" width=60% style="display: block; margin: auto;"></image>
                 <br>
                 <p class="text-justify">
-                    Marigold only predict affine-invariant depth, which could not be directly used for depth supervision. We need to align the scale and offset of Marigold depth with metric depth and use adjusted depth to supervise NeRF training. We jointly optimize the scale, offset and NeRF representation. We used nerfacto as our NeRF backbone due to its fast speed.
+                    Marigold only predict affine-invariant depth, which could not be directly used for depth supervision. We need to align the scale and offset of Marigold depth with metric depth and use adjusted depth to supervise NeRF training. We jointly optimize the scale, offset and NeRF representation. We use nerfacto as our NeRF backbone due to its fast speed.
                 </p>
                 <br>
 
@@ -360,6 +360,14 @@
                 <p class="text-justify" style="text-align: center;font-size: 12px;">
                     Sample the first 10 frames from original datasets at intervals of 5 frames for test, as it takes too much time for Marigold and optimization to run on the entire dataset.
                 </p>
+                <br>
+                <h5>
+                    Limitation Analysis
+                </h5>
+                <p class="text-justify">
+                    Our method, Colmap, and FrozenRecon all might fail when the camera motion is in a nearly straight line or too fast, or the interval between frames is too large. Here we show some failure cases on KITTI (fast and nearly straight line motion) and ScanNet with sampling interval of 100 frames.
+                </p>
+                <image src="img/fail_cases.png" width=90% style="display: block; margin: auto;"></image>
             </div>
 
         </div>
